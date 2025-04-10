@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import { CalendarIcon, CodeXmlIcon, HomeIcon, MailIcon} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -64,18 +64,18 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#projects", icon: PencilIcon, label: "Projetos" },
+    { href: "#projects", icon: CodeXmlIcon, label: "Projetos" },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/LaisVilla",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/lais-villa-205614127/",
         icon: Icons.linkedin,
       },
       X: {
@@ -94,7 +94,7 @@ const DATA = {
 
 export function Header() {
   return (
-    <div className="absolute bottom-2 left-0 right-0">
+    <div className="fixed bottom-2 left-0 right-0">
       <div className="flex flex-col items-center justify-center">
         <TooltipProvider>
           <Dock direction="middle">
