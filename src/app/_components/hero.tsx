@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { CodeIcon } from "lucide-react";
 
 const HeroHome = () => {
   return (
     <div className="flex justify-center flex-col gap-x-4 items-center">
       <div className="w-1/2 flex flex-col items-center justify-center">
-          <div className="flex flex-col gap-y-2 items-center">
+        <div className="flex flex-col gap-y-2 items-center">
           <Image
             src="/logo.jpg"
             alt="Lais Villa"
@@ -13,8 +14,11 @@ const HeroHome = () => {
             height={100}
             className="rounded-full"
           />
-          <p className="bg-primary/10 text-primary text-sm rounded-lg p-1 border border-primary/80">Desenvolvedora FullStack</p>
-          </div>
+          <p className="bg-primary/10 flex items-center animate-pulse text-primary text-xs rounded-lg p-2 border border-primary/80">
+            Desenvolvedora FullStack
+            <CodeIcon className="size-4 ml-1"/>
+          </p>
+        </div>
         <h1 className="text-2xl font-bold ">Olá, me chamo Laís Villa</h1>
         <p className="text-xs text-muted-foreground mb-4">
           Sou formada em Fisioterapia, com 12 anos de experiência na área da
@@ -25,7 +29,7 @@ const HeroHome = () => {
           ampliando minhas habilidades no ecossistema JavaScript.
         </p>
         <div className="flex items-center gap-x-4 justify-start">
-          <Button className="animate-pulse">Saiba Mais</Button>
+          <Button className="hover:bg-primary">Saiba Mais</Button>
           <Button variant="outline">Ver Projetos</Button>
         </div>
       </div>
